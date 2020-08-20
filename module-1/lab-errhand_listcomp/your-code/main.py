@@ -7,67 +7,81 @@ my_listComprehension = [1/egg for egg in eggs]
 print(my_listComprehension)
 
 #Insert here the module/library import statements 
-
+import math
+import os,sys
+import random
 
 
 
 #1. Calculate the square number of the first 20 numbers. Use square as the name of the list.
 # Remember to use list comprehensions and to print your results
+square_20n = [a**2 for a in range (0,20)]
 
-
+print(square_20n)
+        
 
 
 #2. Calculate the first 50 power of two. Use power_of_two as the name of the list.
 # Remember to use list comprehensions and to print your results
 
+power_of_two = [math.pow (b,2) for b in range (0,50)]
 
+print(power_of_two)
 
 
 #3. Calculate the square root of the first 100 numbers. Use sqrt as the name of the list.
 # You will probably need to install math library with pip and import it in this file.  
 # Remember to use list comprehensions and to print your results
 
+sqrt = [math.sqrt (c) for c in range (0,100)]
 
-
+print(sqrt)
 
 #4. Create this list [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]. Use my_list as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
-
+list = [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]
+my_list = [sublist for sublist in list]
+print (my_list)
 
 #5. Find the odd numbers from 1-100. Use odds as the name of the list. 
 # Remember to use list comprehensions and to print your results
 
-
-
+odds = [d for d in range (1,100) if d %2 != 0 ]
+print (odds)
 
 #6. Find all of the numbers from 1-1000 that are divisible by 7. Use divisible_by_seven as the name of the list.
 # Remember to use list comprehensions and to print your results
 
-
-
+divisible_by_seven = [e for e in range (1,100) if e %7 == 0 ]
+print (divisible_by_seven)
 
 #7. Remove all of the vowels in a string. Hint: make a list of the non-vowels. Use non_vowels as the name of the list.
 # Remember to use list comprehensions and to print your results
 # You can use the following test string but feel free to modify at your convenience
 
-teststring = 'Find all of the words in a string that are monosyllabic'
-
-
+teststring = "Find all of the words in a string that are monosyllabic"
+vowels = "a","e","i","o","u"
+non_vowels =[f for f in teststring if f not in vowels]
+print (non_vowels)
 
 
 #8. Find the capital letters (and not white space) in the sentence 'The Quick Brown Fox Jumped Over The Lazy Dog'. 
 # Use capital_letters as the name of the list.  
 # Remember to use list comprehensions and to print your results
 
-
+sentence = ('The Quick Brown Fox Jumped Over The Lazy Dog')
+capital_letters =[g for g in sentence if g.isupper()]
+print (capital_letters)
 
 
 #9. Find all the consonants in the sentence 'The quick brown fox jumped over the lazy dog'.
 # Use consonants as the name of the list.
 # Remember to use list comprehensions and to print your results.
 
+vowels = "a","e","i","o","u"
+consonants =[h for h in sentence if h  not in vowels]
+print (consonants)
 
 
 
@@ -76,12 +90,19 @@ teststring = 'Find all of the words in a string that are monosyllabic'
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
+repos = "~/repos/datamad0820/"
+directorio = os.listdir(repos)
+for file in dirs:
+   print (file)
+
+#me lie con la llamada al repo
+
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
-
+random_list = [random.randint (1,100) for i in range (10) for j in range (4) ]
 
 
 
@@ -163,6 +184,11 @@ def linux_interaction():
     assert ('linux' in sys.platform), "Function can only run on Linux systems."
     print('Doing something.')
 
+try:
+    linux_interaction()
+except Exception as e:
+    print ("Algo falla")
+    print (e)
 
 # Bonus Questions:
 
