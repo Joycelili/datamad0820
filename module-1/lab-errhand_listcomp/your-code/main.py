@@ -6,7 +6,7 @@ my_listComprehension = [1/egg for egg in eggs]
 
 print(my_listComprehension)
 
-#Insert here the module/library import statements 
+"""#Insert here the module/library import statements 
 import math
 import os,sys
 import random
@@ -158,6 +158,7 @@ abc=[10,20,20]
 try:
     print(abc[3])
 #no entendi como hacerlo
+"""
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
@@ -184,7 +185,7 @@ fp = open('myfile.txt')
 
 
 
-
+"""
 #20. The following function can only run on a Linux system. 
 # The assert in this function will throw an exception if you call it on an operating system other than Linux. 
 # Handle this exception using try and except blocks. 
@@ -198,7 +199,7 @@ try:
     linux_interaction()
 except Exception as e:
     print ("Algo falla")
-    print (e)
+    print (e)"""
 
 # Bonus Questions:
 
