@@ -90,28 +90,29 @@ print (consonants)
 # You will probably need to import os library and some of its modules. You will need to make some online research.
 # Remember to use list comprehensions and to print your results.
 
-repos = "~/repos/datamad0820/"
+repos = ("joyce@joyce-Aspire-A315-21:~/repos/datamad0820")
 directorio = os.listdir(repos)
-for file in dirs:
+for file in directorio:
    print (file)
 
-#me lie con la llamada al repo
+#Error file no found. Creo que el error es la manera en expresar mi repo
 
 
 
 #11. Create 4 lists of 10 random numbers between 0 and 100 each. Use random_lists as the name of the list. 
 #You will probably need to import random module
 # Remember to use list comprehensions and to print your results
-random_list = [random.randint (1,100) for i in range (10) for j in range (4) ]
+random_list = [random.randint (1,100) [for i in range (10)] [for j in range (4) ]]
 
+#no se sumplieron los objetivos, no pude hacer un nesten list con compresion   
 
 
 #12. Flatten the following list of lists. Use flatten_list as the name of the output.
 # Remember to use list comprehensions and to print your results
 
 list_of_lists = [[1,2,3],[4,5,6],[7,8,9]]
-
-
+flatten_list = [l for k in list_of_lists for l in k]
+print (flatten_list)
 
 #13. Convert the numbers of the following nested list to floats. Use floats as the name of the list. 
 # Remember to use list comprehensions and to print your results.
@@ -120,15 +121,20 @@ list_of_lists = [['40', '20', '10', '30'], ['20', '20', '20', '20', '20', '30', 
 ['30', '20', '30', '50', '10', '30', '20', '20', '20'], ['100', '100'], ['100', '100', '100', '100', '100'], \
 ['100', '100', '100', '100']]
 
-
+floats = [float(n) for m in list_of_lists for n in m]
+print (floats)
 
 
 #14. Handle the exception thrown by the code below by using try and except blocks. 
 
 
 for i in ['a','b','c']:
-    print i**2
+    try:
+       print i**2 
+    except Exception as e:
+        print (e)
 
+#no entendi la dinamica porque intente poder print (i) en vez de i**2 y no me imprime try
 
 #15. Handle the exception thrown by the code below by using try and except blocks. 
 #Then use a finally block to print 'All Done.'
@@ -137,17 +143,21 @@ for i in ['a','b','c']:
 x = 5
 y = 0
 
-z = x/y
-
-
-
+try:
+    print (z = x/y)
+except Exception as e:
+    
+    print ("Tipo de error:",(e))
+finally:
+    print ("All Done")
 
 #16. Handle the exception thrown by the code below by using try and except blocks. 
 # Check in provided resources the type of error you may use. 
 
 abc=[10,20,20]
-print(abc[3])
-
+try:
+    print(abc[3])
+#no entendi como hacerlo
 
 #17. Handle at least two kind of different exceptions when dividing a couple of numbers provided by the user. 
 # Hint: take a look on python input function. 
