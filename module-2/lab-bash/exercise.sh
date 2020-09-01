@@ -32,7 +32,7 @@ echo " Homo homini lupus.">>lorem-copy/sed.txt
 cat lorem-copy/sed.txt|tail -n 3
 
 # ejercicio 12.Editar at.txt dentro de lorem-copy. Deberás usar sed.
-
+sed 's/et/ET/g' lorem-copy/at.txt
 # ejercicio 13.Encuentra al usuario activo en el sistema.
 w 
 
@@ -42,8 +42,9 @@ pwd
 # ejercicio 15.lista los archivos que terminan por .txt en la carpeta lorem.
 cd lorem
 ls -la
-# ejercicio 16.Visualiza las 3 ultimas lineas de sed.
-# ejercicio 17.Visualiza las 3 ultimas lineas de sed.
-# ejercicio 18.Visualiza las 3 ultimas lineas de sed.
-# ejercicio 19.Visualiza las 3 ultimas lineas de sed.
-# ejercicio 20.Visualiza las 3 ultimas lineas de sed.
+# ejercicio 16.número de líneas de sed.txt dentro de lorem.
+
+# ejercicio 17. número de archivos que empiezan por lorem que están en  los directorios 
+# ejercicio 18.Encuentra todas las apariciones de et en at.txt dentro de la carpeta lorem.
+# ejercicio 19.número de apariciones del string et en at.txt dentro de la carpeta lorem..
+# ejercicio 20.Cuenta el número de apariciones del string et en todos los archivos del directorio lorem-copy.
